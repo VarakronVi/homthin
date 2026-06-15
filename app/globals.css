@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cream: #F5F0E8;
+    --color-cream-light: #FDFAF5;
+    --color-gold: #C9A84C;
+    --color-earth: #4A6741;
+    --color-brown: #2C1810;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream-light);
+    color: var(--color-brown);
+    font-family: 'Inter', 'Sarabun', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', 'Sarabun', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-cream-light transition-all duration-300;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-8 py-3 border border-brown/30 text-brown text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl text-brown leading-tight;
+  }
+
+  .thai-divider {
+    @apply flex items-center gap-4 my-8;
+  }
+
+  .thai-divider::before,
+  .thai-divider::after {
+    content: '';
+    @apply flex-1 h-px bg-gold/40;
+  }
+
+  .product-card {
+    @apply relative bg-cream-light border border-gold/20 overflow-hidden transition-all duration-500 hover:border-gold/60 hover:shadow-[0_8px_32px_rgba(201,168,76,0.12)];
+  }
+
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tag {
+    @apply inline-block text-xs tracking-widest uppercase text-earth border border-earth/30 px-3 py-1;
+  }
+}
+
+/* Linen texture — ใส่ที่ body โดยตรง ไม่ใช้ pseudo-element เพื่อไม่ให้กระทบ stacking context */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Cpath d='M0 0L4 4M4 0L0 4' stroke='%23C9A84C' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 0;
+}
