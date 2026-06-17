@@ -1,151 +1,168 @@
 export type Product = {
   id: number;
-  nameTH: string;
   nameEN: string;
+  nameTH: string;
   province: string;
   provinceTH: string;
-  scent: string;
+  region: string;
   price: number;
-  biomassSource: string;
-  storyTH: string;
-  storyEN: string;
+  scent: string;
+  scentProfile: string;
   tag: string;
   bgColor: string;
+  catalogImage: string;
+  detailImages: [string, string, string];
+  description1: string;
+  description2: string;
+  description3: string;
+  description4: string;
+  headline1: string;
+  headline2: string;
   scentNotes: { top: string[]; middle: string[]; base: string[] };
 };
 
 export const products: Product[] = [
   {
     id: 1,
-    nameTH: "หอมถิ่นเชียงใหม่",
-    nameEN: "Hom Thin Chiang Mai",
-    province: "Chiang Mai",
-    provinceTH: "เชียงใหม่",
-    scent: "Wild Orchid · Mountain Pine · Lemongrass",
-    price: 290,
-    biomassSource: "Rice straw from Chiang Mai highland farms",
-    storyTH:
-      "ดอยสูงของเชียงใหม่เป็นที่อยู่ของกล้วยไม้ป่าและสนภูเขา กลิ่นนี้ถูกกลั่นจากธรรมชาติของดอย และถ่านชีวภาพที่ใช้ผลิตมาจากฟางข้าวที่เกษตรกรในพื้นที่สูงเคยเผาทิ้ง",
-    storyEN:
-      "The highlands of Chiang Mai shelter wild orchids and mountain pines. The biochar in this product was made from rice straw once left to burn — now transformed into something that brings the mountain to you.",
-    tag: "Mountain",
-    bgColor: "#E8EDE5",
+    nameEN: "Plumeria Edition",
+    nameTH: "พลูมีเรีย อิดิชัน",
+    province: "Bangkok",
+    provinceTH: "กรุงเทพมหานคร",
+    region: "Central",
+    price: 249,
+    scent: "Siam Royal Spa",
+    scentProfile: "Floral",
+    tag: "Zen Sanctuary",
+    bgColor: "#F0EBE0",
+    catalogImage: "/images/catalog/plumeria.svg",
+    detailImages: [
+      "/images/products/plumeria/image-1.svg",
+      "/images/products/plumeria/image-2.svg",
+      "/images/products/plumeria/image-3.svg",
+    ],
+    headline1: "The Essence of Serenity",
+    headline2: "Step Into The Sanctuary",
+    description1:
+      "Our signature masterpiece. The Plumeria Edition is a universal symbol of Thai wellness and hospitality. Featuring soft, organic geometries, it transforms any room into a high-end spa sanctuary.",
+    description2:
+      "Designed to blend seamlessly into luxury resorts and mindful homes, the Plumeria shell features three smooth, overlapping petals that wrap elegantly around the internal Venturi engine. The top lip is softly asymmetrical, guiding the eye toward a central PLA mesh sculpted to resemble the heart of a blooming frangipani flower.",
+    description3:
+      "The ultimate expression of relaxation. A rich, narcotic blend of blooming white frangipani, warm ylang-ylang, and a smooth base of Thai sandalwood. It immediately lowers the heart rate and evokes the feeling of stepping into a world-class wellness retreat.",
+    description4:
+      "The plumeria flower is the welcoming signature of Thailand's world-renowned wellness culture, from the hidden rainforest retreats of Phuket to the oceanfront spas of Koh Samui. Take a moment to disconnect, breathe deeply, and experience the unparalleled warmth of traditional Thai healing arts.",
     scentNotes: {
-      top: ["Lemongrass", "Bergamot"],
-      middle: ["Wild Orchid", "Green Leaves"],
-      base: ["Mountain Pine", "Cedarwood"],
+      top: ["White Frangipani", "Ylang-Ylang"],
+      middle: ["Thai Jasmine", "Lotus"],
+      base: ["Thai Sandalwood", "Warm Musk"],
     },
   },
   {
     id: 2,
-    nameTH: "หอมถิ่นสุโขทัย",
-    nameEN: "Hom Thin Sukhothai",
-    province: "Sukhothai",
-    provinceTH: "สุโขทัย",
-    scent: "Lotus Blossom · Jasmine · Ancient Earth",
-    price: 290,
-    biomassSource: "Sugarcane bagasse from Sukhothai fields",
-    storyTH:
-      "สุโขทัย เมืองแห่งรุ่งอรุณของความสุข กลิ่นดอกบัวและมะลิในยามเช้าของวัดเก่าแก่ ถ่านชีวภาพจากชานอ้อยของเกษตรกรในพื้นที่กลั่นเป็นกลิ่นที่พาใจกลับสู่ราชธานีเก่า",
-    storyEN:
-      "Sukhothai — dawn of happiness. Morning lotus and jasmine drift through ancient temple grounds. Biochar from local sugarcane bagasse carries the quiet spirit of Thailand's first kingdom.",
-    tag: "Heritage",
-    bgColor: "#F0EBE0",
+    nameEN: "Sao Ching Cha Edition",
+    nameTH: "เสาชิงช้า อิดิชัน",
+    province: "Bangkok",
+    provinceTH: "กรุงเทพมหานคร",
+    region: "Central",
+    price: 299,
+    scent: "Siam Citrus",
+    scentProfile: "Citrus",
+    tag: "Architectural",
+    bgColor: "#EDE8DF",
+    catalogImage: "/images/catalog/sao-ching-cha.svg",
+    detailImages: [
+      "/images/products/sao-ching-cha/image-1.svg",
+      "/images/products/sao-ching-cha/image-2.svg",
+      "/images/products/sao-ching-cha/image-3.svg",
+    ],
+    headline1: "The Pillar of Phra Nakhon",
+    headline2: "Step Into Bangkok Old Town",
+    description1:
+      "Architectural precision meets historic grandeur. The Sao Ching Cha Edition draws its form from Bangkok's most iconic structural landmark, offering a commanding, regal aesthetic paired with a bright, refreshing citrus profile.",
+    description2:
+      "Strikingly vertical and deeply architectural, this monolith relies on strong, parallel lines. The form mimics the towering red teak pillars of the Giant Swing, culminating in a subtle, sweeping horizontal curve at the exhaust lip. The top scent matrix is an intricate, mathematical grid, reflecting the organized, historic urban planning of Bangkok's royal district.",
+    description3:
+      "A refined, cosmopolitan take on traditional Thai citrus. Effervescent notes of sweet mandarin and kaffir lime cut through the mustiness of urban living, creating a crisp, highly focused atmosphere perfect for a modern office or luxury living room.",
+    description4:
+      "Standing over 21 meters tall, the crimson pillars of the Giant Swing mark the historic and spiritual center of Bangkok. Wander through the quiet, winding alleys of Phra Nakhon, discover generations-old street food stalls, and witness the timeless architecture of Wat Suthat as the city pulses around it.",
     scentNotes: {
-      top: ["Jasmine", "White Tea"],
-      middle: ["Lotus Blossom", "Water Lily"],
-      base: ["Sandalwood", "Ancient Earth"],
+      top: ["Kaffir Lime", "Sweet Mandarin"],
+      middle: ["Bergamot", "Lemongrass"],
+      base: ["Cedarwood", "White Musk"],
     },
   },
   {
     id: 3,
-    nameTH: "หอมถิ่นกระบี่",
-    nameEN: "Hom Thin Krabi",
-    province: "Krabi",
-    provinceTH: "กระบี่",
-    scent: "Sea Salt · Ylang Ylang · Coconut Blossom",
-    price: 290,
-    biomassSource: "Coconut husk from Krabi coastal farms",
-    storyTH:
-      "กระบี่ ดินแดนแห่งทะเลสีมรกตและกลิ่นมหาสมุทร กลิ่นเกลือทะเล กระแจะ และดอกมะพร้าวที่ล่องลอยในสายลมทะเล ถ่านชีวภาพจากกะลามะพร้าวของชาวสวนในพื้นที่",
-    storyEN:
-      "Krabi's emerald sea and coastal breezes carry ylang ylang and sea salt. The biochar here comes from coconut husks — a gift from Krabi's coconut farmers.",
-    tag: "Coastal",
-    bgColor: "#E5EDEE",
+    nameEN: "Phi Ta Khon Edition",
+    nameTH: "ผีตาโขน อิดิชัน",
+    province: "Loei",
+    provinceTH: "เลย",
+    region: "Northeastern",
+    price: 299,
+    scent: "Morning Mist",
+    scentProfile: "Earthy",
+    tag: "Cultural",
+    bgColor: "#E6EBE4",
+    catalogImage: "/images/catalog/phi-ta-khon.svg",
+    detailImages: [
+      "/images/products/phi-ta-khon/image-1.svg",
+      "/images/products/phi-ta-khon/image-2.svg",
+      "/images/products/phi-ta-khon/image-3.svg",
+    ],
+    headline1: "The Spirit of the Highlands",
+    headline2: "Step Into Loei",
+    description1:
+      "Bold, structural, and deeply rooted in Isan folklore. The Phi Ta Khon Edition brings a striking sculptural presence to your interior while passively diffusing the cool, clarifying aura of a mountain morning.",
+    description2:
+      "Capturing the expressive proportions of Loei's famous festival masks, this design features a dramatic, flared base that pinches tightly at the Venturi throat before expanding into an oversized, sweeping top lip. The recessed 3D-printed mesh is a dynamic, radial starburst, engineered to accelerate airflow while honoring the vibrant, woven textures of Isan craftsmanship.",
+    description3:
+      "A crisp, clarifying blend that transports you to the cool, fog-draped peaks of Loei just before dawn. It opens with clean, airy notes of fresh mountain dew and crushed wild mint, anchored perfectly by a soft, earthy undertone of damp soil and green bamboo.",
+    description4:
+      "Hidden in a valley surrounded by jagged mountains, the Dan Sai district is the vibrant home of the Phi Ta Khon festival. Wake up before dawn to explore the untouched beauty of Phu Ruea National Park, where the highland air is crisp, the community is warm, and the culture is fiercely alive.",
     scentNotes: {
-      top: ["Sea Salt", "Citrus"],
-      middle: ["Ylang Ylang", "Frangipani"],
-      base: ["Coconut", "Driftwood"],
+      top: ["Mountain Dew", "Wild Mint"],
+      middle: ["Green Bamboo", "Cool Air"],
+      base: ["Damp Earth", "Vetiver"],
     },
   },
   {
     id: 4,
-    nameTH: "หอมถิ่นเลย",
-    nameEN: "Hom Thin Loei",
-    province: "Loei",
-    provinceTH: "เลย",
-    scent: "Cool Forest · Wild Herb · Morning Mist",
-    price: 290,
-    biomassSource: "Corn stalk from Loei highland farms",
-    storyTH:
-      "เลย ดินแดนแห่งภูเขาหมอกและอากาศหนาวเย็น กลิ่นป่าสนในยามเช้าและสมุนไพรป่าที่เปียกน้ำค้าง ถ่านชีวภาพจากซังข้าวโพดของเกษตรกรบนภูสูง",
-    storyEN:
-      "Loei's misty mountains and cool highland air carry wild herbs and forest pine. Biochar from corn stalks grown on the plateau — the cold north in a breath.",
-    tag: "Highland",
-    bgColor: "#E6EBE4",
+    nameEN: "Bo Sang Edition",
+    nameTH: "บ่อสร้าง อิดิชัน",
+    province: "Chiang Mai",
+    provinceTH: "เชียงใหม่",
+    region: "Northern",
+    price: 299,
+    scent: "Antique Starry Night",
+    scentProfile: "Woody",
+    tag: "Cultural",
+    bgColor: "#E8EDE5",
+    catalogImage: "/images/catalog/bo-sang.svg",
+    detailImages: [
+      "/images/products/bo-sang/image-1.svg",
+      "/images/products/bo-sang/image-2.svg",
+      "/images/products/bo-sang/image-3.svg",
+    ],
+    headline1: "The Geometry of Calm",
+    headline2: "Step Into Chiang Mai",
+    description1:
+      "Elevate your sanctuary. Inspired by the elegant canopy of Chiang Mai's traditional artisan umbrellas, the Bo Sang Edition purifies your space while releasing a calming, midnight botanical aroma.",
+    description2:
+      "The Bo Sang monolith features a slender, highly textured cylindrical base that flares gracefully outward at the top, mimicking an open canopy. The exterior is defined by precision-debossed vertical lines representing traditional bamboo ribs, while the top PLA lattice is arranged in a delicate, radial spoke pattern to ensure flawless, 360-degree scent dispersion.",
+    description3:
+      "A sophisticated, deep botanical blend that captures the crisp, cool air of a Northern Thai mountain after dusk. It features grounding base notes of local aged woods, intertwined with night-blooming jasmine and a whisper of mountain mist.",
+    description4:
+      "The heritage of the Bo Sang umbrella village dates back over a century, where artisans stretch natural mulberry paper over hand-carved bamboo frames. Discover the quiet charm of San Kamphaeng, cycle through misty highland tea plantations, and experience the slow, intentional pace of Northern Thai life.",
     scentNotes: {
-      top: ["Eucalyptus", "Morning Mist"],
-      middle: ["Wild Herb", "Mint"],
-      base: ["Pine", "Cool Earth"],
-    },
-  },
-  {
-    id: 5,
-    nameTH: "หอมถิ่นนครศรีฯ",
-    nameEN: "Hom Thin Nakhon Si",
-    province: "Nakhon Si Thammarat",
-    provinceTH: "นครศรีธรรมราช",
-    scent: "Sacred Turmeric · Rain on Soil · Frangipani",
-    price: 290,
-    biomassSource: "Palm frond from Nakhon Si rubber farms",
-    storyTH:
-      "นครศรีธรรมราช เมืองแห่งพระบรมธาตุและวัฒนธรรมใต้ กลิ่นขมิ้นศักดิ์สิทธิ์ ฝนต้นฤดูที่ตกลงดิน และดอกลั่นทมขาวจากวัดเก่าแก่ ถ่านชีวภาพจากกาบปาล์มของชาวสวนยาง",
-    storyEN:
-      "Nakhon Si Thammarat — the great city of the south. Sacred turmeric, first rain on red earth, and temple frangipani. Biochar from palm fronds transforms what was burned into ritual.",
-    tag: "Sacred",
-    bgColor: "#EEE8E0",
-    scentNotes: {
-      top: ["Frangipani", "Rain"],
-      middle: ["Turmeric", "Incense"],
-      base: ["Red Earth", "Warm Wood"],
-    },
-  },
-  {
-    id: 6,
-    nameTH: "หอมถิ่นน่าน",
-    nameEN: "Hom Thin Nan",
-    province: "Nan",
-    provinceTH: "น่าน",
-    scent: "River Reed · Green Bamboo · River Water",
-    price: 290,
-    biomassSource: "Rice husk from Nan valley farms",
-    storyTH:
-      "น่าน เมืองเล็กริมแม่น้ำที่ยังคงความบริสุทธิ์ กลิ่นกกริมน้ำ ไผ่เขียวในยามเช้า และสายน้ำใสของแม่น้ำน่าน ถ่านชีวภาพจากแกลบข้าวของเกษตรกรในหุบเขา",
-    storyEN:
-      "Nan — a small riverside city that time has kept pristine. River reeds, green bamboo, and clear mountain water. Biochar from rice husks carries the valley's quiet grace.",
-    tag: "River",
-    bgColor: "#E4EAE8",
-    scentNotes: {
-      top: ["Green Bamboo", "Fresh Water"],
-      middle: ["River Reed", "Cucumber"],
-      base: ["Vetiver", "Cedarwood"],
+      top: ["Night Jasmine", "Mountain Mist"],
+      middle: ["Aged Wood", "Vetiver"],
+      base: ["Sandalwood", "Dark Amber"],
     },
   },
 ];
 
 export const impactStats = [
   { value: 17, unit: "M", label: "Tons of biomass\nsaved from burning", labelTH: "ตันชีวมวลที่ถูกนำมาใช้\nแทนการเผา" },
-  { value: 40, unit: "%", label: "Of PM2.5 emissions\nfrom agricultural burning", labelTH: "ของฝุ่น PM2.5\nมาจากการเผาชีวมวล" },
-  { value: 100, unit: "%", label: "Non-toxic\nzero VOCs", labelTH: "ปลอดสารพิษ\nไม่มี VOC" },
-  { value: 350, unit: "B USD", label: "Bio-based market\nby 2027", labelTH: "มูลค่าตลาด\nสินค้าชีวภาพปี 2027" },
+  { value: 40, unit: "%", label: "Of PM2.5 from\nagricultural burning", labelTH: "ของฝุ่น PM2.5\nมาจากการเผาชีวมวล" },
+  { value: 100, unit: "%", label: "Natural\nzero electricity", labelTH: "ธรรมชาติ\nไม่ใช้ไฟฟ้า" },
+  { value: 350, unit: "B", label: "USD bio-based\nmarket by 2027", labelTH: "USD มูลค่าตลาด\nสินค้าชีวภาพปี 2027" },
 ];
