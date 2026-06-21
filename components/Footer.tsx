@@ -65,6 +65,8 @@ export default function Footer() {
               {lang === "th" ? "ติดต่อ" : "Contact"}
             </h4>
             <ul className="space-y-3 text-sm text-cream/50">
+              <li>ธนพรกนก</li>
+              <li>063-9977551</li>
               <li>homthin@gmail.com</li>
               <li>LINE: @homthin</li>
             </ul>
