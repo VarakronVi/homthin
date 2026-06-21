@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCartStore, useLangStore } from "@/lib/store";
 import Link from "next/link";
 
@@ -68,14 +69,17 @@ export default function CartSidebar() {
           ) : (
             items.map(({ product, quantity }) => (
               <div key={product.id} className="flex gap-4">
-                {/* Placeholder image */}
+                {/* Product image */}
                 <div
-                  className="w-20 h-20 flex-shrink-0 flex items-center justify-center border border-gold/20"
+                  className="relative w-20 h-20 flex-shrink-0 border border-gold/20 overflow-hidden"
                   style={{ backgroundColor: product.bgColor }}
                 >
-                  <span className="text-[8px] text-earth/60 text-center leading-tight px-1">
-                    {product.provinceTH}
-                  </span>
+                  <Image
+                    src={product.catalogImage}
+                    alt={product.nameEN}
+                    fill
+                    className="object-contain p-2"
+                  />
                 </div>
 
                 <div className="flex-1 min-w-0">

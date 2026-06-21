@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useCartStore, useLangStore } from "@/lib/store";
 
@@ -65,10 +66,10 @@ export default function CartPage() {
                 items.map(({ product, quantity }) => (
                   <div key={product.id} className="flex gap-5 p-5 bg-cream border border-gold/20">
                     <div
-                      className="w-20 h-20 flex-shrink-0 flex items-center justify-center border border-gold/10"
+                      className="relative w-20 h-20 flex-shrink-0 border border-gold/10 overflow-hidden"
                       style={{ backgroundColor: product.bgColor }}
                     >
-                      <span className="text-[8px] text-earth/50 text-center">{product.provinceTH}</span>
+                      <Image src={product.catalogImage} alt={product.nameEN} fill className="object-contain p-2" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-serif text-base text-brown">
