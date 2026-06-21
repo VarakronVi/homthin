@@ -60,6 +60,45 @@ export default function StoryPage() {
         </div>
       </section>
 
+      {/* ── WHY HOM THIN ── */}
+      <section className="py-24 px-6 bg-cream-light border-t border-gold/20">
+        <div className="max-w-4xl mx-auto">
+          <div className="fade-in-up text-center mb-14">
+            <p className="text-[10px] tracking-[0.4em] text-gold uppercase mb-3">
+              {lang === "th" ? "ทำไมต้องหอมถิ่น" : "Why Hom Thin"}
+            </p>
+            <h2 className="section-title">
+              {lang === "th" ? "เราเริ่มจากปัญหา ไม่ใช่ผลิตภัณฑ์" : "We Started With a Problem, Not a Product."}
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="fade-in-up grid grid-cols-2 gap-4">
+              {[
+                { value: "17M+", th: "ตันชีวมวลเกษตรถูกเผาทิ้งในที่โล่งทุกปี", en: "tons of farm biomass burned in open fields each year" },
+                { value: "40%", th: "ของฝุ่น PM2.5 ทั้งประเทศมาจากการเผานี้", en: "of Thailand's PM2.5 pollution comes from this burning" },
+              ].map((s, i) => (
+                <div key={i} className="group relative border border-gold/20 bg-cream px-5 py-12 text-center fade-in-up transition-all duration-500 hover:border-gold/60" style={{ transitionDelay: `${i * 0.1}s` }}>
+                  <span className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-px bg-gold/60 group-hover:w-16 transition-all duration-500" />
+                  <div className="font-serif text-gold-dark leading-none mb-3" style={{ fontSize: "clamp(2.4rem, 6vw, 3.5rem)" }}>{s.value}</div>
+                  <p className="text-xs text-brown/60 leading-relaxed">{lang === "th" ? s.th : s.en}</p>
+                </div>
+              ))}
+            </div>
+            <div className="fade-in-up space-y-4 text-sm text-brown/70 leading-relaxed">
+              <p>{lang === "th"
+                ? "ทุกปีประเทศไทยสูญเสียชีวมวลการเกษตรกว่า 17 ล้านตันไปกับการเผาในที่โล่ง ควันเหล่านี้ก่อให้เกิดฝุ่น PM2.5 ถึง 40% ของทั้งประเทศ ส่งผลต่อสุขภาพประชาชนและสิ่งแวดล้อมโดยตรง"
+                : "Every year, Thailand loses over 17 million tons of agricultural biomass to open-field burning — contributing 40% of the country's PM2.5 pollution and directly threatening public health and the environment."}</p>
+              <p>{lang === "th"
+                ? "เกษตรกรเป็นเจ้าของทรัพยากรเหล่านี้ แต่ไม่มีทางเปลี่ยนมันให้เป็นรายได้ ชีวมวลจึงกลายเป็นภาระ ไม่ใช่ทรัพย์สิน"
+                : "Farmers own these resources but have no way to monetize them. Biomass becomes a burden — not an asset."}</p>
+              <p className="text-brown/85 font-medium border-l-2 border-gold/50 pl-4">{lang === "th"
+                ? "หอมถิ่นเกิดขึ้นเพื่อเปลี่ยนภาระนั้นให้เป็นคุณค่า — เปลี่ยนควันให้เป็นกลิ่นหอม และเปลี่ยนของเหลือทิ้งให้เป็นรายได้ของชุมชน"
+                : "Hom Thin exists to turn that burden into value — turning smoke into scent, and waste into community income."}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── PART 1: PHILOSOPHY ── */}
       <section className="py-24 px-6 bg-cream">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -119,11 +158,67 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* ── PART 3: ECONOMICS ── */}
+      {/* ── PART 3: THE SCIENCE OF BIOCHAR ── */}
+      <section className="py-24 px-6 bg-cream">
+        <div className="max-w-4xl mx-auto">
+          <div className="fade-in-up text-center mb-14">
+            <p className="text-[10px] tracking-[0.4em] text-gold uppercase mb-3">03</p>
+            <h2 className="section-title mb-6">
+              {lang === "th" ? "วิทยาศาสตร์เบื้องหลังไบโอชาร์" : "The Science of Biochar."}
+            </h2>
+            <p className="text-sm text-brown/70 leading-relaxed max-w-2xl mx-auto">
+              {lang === "th"
+                ? "ผ่านกระบวนการไพโรไลซิส (การเผาชีวมวลในสภาวะออกซิเจนต่ำ) ฟางข้าวและซังข้าวโพดถูกแปรเป็นถ่านชีวภาพที่มีโครงสร้างรูพรุนสูง — เป็นทั้งวัสดุดูดซับกลิ่นในผลิตภัณฑ์ของเรา และวัสดุปรับปรุงดินที่กักเก็บคาร์บอนไว้ในดินได้ยาวนาน"
+                : "Through pyrolysis — burning biomass in a low-oxygen environment — rice straw and corn cobs become a highly porous biochar. It is both the odor-absorbing core of our products and a soil amendment that locks carbon into the earth for centuries."}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+            {[
+              { value: "200–500", unit: "m²/g", th: "พื้นที่ผิวจำเพาะ — รูพรุนระดับนาโนที่ดูดซับกลิ่นไม่พึงประสงค์", en: "Specific surface area — nano-pores that trap unwanted odors" },
+              { value: "100s", unit: lang === "th" ? "ปี" : "yrs", th: "กักเก็บคาร์บอนในดินได้นานหลายร้อยปี ลดภาวะโลกร้อน", en: "Carbon stays locked in soil for centuries, fighting climate change" },
+              { value: "20–30", unit: "%", th: "ลดการใช้ปุ๋ยเคมี เพิ่มการอุ้มน้ำและธาตุอาหารในดิน", en: "Less chemical fertilizer — better water & nutrient retention" },
+              { value: "0", unit: "VOC", th: "ปลอดสารสังเคราะห์ 100% ปลอดภัยต่อทุกคนในบ้าน", en: "Zero synthetic compounds — 100% safe for the whole home" },
+            ].map((c, i) => (
+              <div
+                key={i}
+                className="group relative bg-cream-light border border-gold/20 px-6 pt-10 pb-8 text-center fade-in-up transition-all duration-500 hover:border-gold/60 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(201,168,76,0.12)]"
+                style={{ transitionDelay: `${i * 0.08}s` }}
+              >
+                <span className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-px bg-gold/60 transition-all duration-500 group-hover:w-20" />
+                <div className="font-serif text-gold-dark leading-none tracking-tight whitespace-nowrap" style={{ fontSize: "clamp(1.4rem, 3.4vw, 2.1rem)" }}>
+                  {c.value}
+                </div>
+                <div className="inline-flex items-center gap-2 mt-3 mb-5 text-[10px] tracking-[0.25em] text-gold uppercase">
+                  <span className="w-3 h-px bg-gold/40" />
+                  {c.unit}
+                  <span className="w-3 h-px bg-gold/40" />
+                </div>
+                <p className="text-xs text-brown/60 leading-relaxed">{lang === "th" ? c.th : c.en}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Dual-action: absorb + release */}
+          <div className="fade-in-up max-w-2xl mx-auto flex items-center justify-center gap-4 text-center">
+            <div className="flex-1 border border-gold/20 bg-cream-light px-5 py-5">
+              <p className="font-serif text-lg text-brown mb-1">{lang === "th" ? "ไบโอชาร์ ดูดซับ" : "Biochar Absorbs"}</p>
+              <p className="text-xs text-brown/55 leading-relaxed">{lang === "th" ? "ดักจับกลิ่นอับและความชื้นด้วยรูพรุน" : "Captures stale odors & moisture in its pores"}</p>
+            </div>
+            <span className="text-gold text-2xl flex-shrink-0">+</span>
+            <div className="flex-1 border border-gold/20 bg-cream-light px-5 py-5">
+              <p className="font-serif text-lg text-brown mb-1">{lang === "th" ? "PLA ปล่อยกลิ่น" : "PLA Releases"}</p>
+              <p className="text-xs text-brown/55 leading-relaxed">{lang === "th" ? "ค่อย ๆ ปล่อยกลิ่นหอมประจำถิ่นของไทย" : "Slowly diffuses authentic Thai provincial scents"}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PART 4: ECONOMICS ── */}
       <section className="py-24 px-6 bg-earth">
         <div className="max-w-4xl mx-auto">
           <div className="fade-in-up text-center mb-16">
-            <p className="text-[10px] tracking-[0.4em] text-gold uppercase mb-3">03</p>
+            <p className="text-[10px] tracking-[0.4em] text-gold uppercase mb-3">04</p>
             <h2 className="font-serif text-cream text-3xl md:text-4xl mb-6">
               {lang === "th" ? "จาก 1 บาท สู่ 30 บาท:\nการเล่นแร่แปรธาตุแห่งของเสีย" : "From 1 Baht to 30 Baht:\nThe Alchemy of Waste."}
             </h2>
@@ -150,14 +245,14 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* ── PART 4: HUMAN IMPACT ── */}
+      {/* ── PART 5: HUMAN IMPACT ── */}
       <section className="py-24 px-6 bg-cream-light border-t border-gold/20">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <div className="fade-in-up border border-gold/20 overflow-hidden">
             <Carousel images={impactCarousel} interval={3500} aspectRatio="aspect-[4/3]" />
           </div>
           <div className="fade-in-up">
-            <p className="text-[10px] tracking-[0.4em] text-gold uppercase mb-3">04</p>
+            <p className="text-[10px] tracking-[0.4em] text-gold uppercase mb-3">05</p>
             <h2 className="section-title mb-6">
               {lang === "th" ? "สร้างความเจริญรุ่งเรืองและศักดิ์ศรี" : "Cultivating Prosperity and Pride."}
             </h2>
@@ -207,6 +302,56 @@ export default function StoryPage() {
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                 />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── REACH: 16 COMMUNITIES, 8 PROVINCES ── */}
+      <section className="py-24 px-6 bg-cream border-t border-gold/20">
+        <div className="max-w-5xl mx-auto">
+          <div className="fade-in-up text-center mb-14">
+            <p className="text-[10px] tracking-[0.4em] text-gold uppercase mb-3">
+              {lang === "th" ? "พื้นที่ดำเนินงาน" : "Our Reach"}
+            </p>
+            <h2 className="section-title mb-4">
+              {lang === "th" ? "16 ชุมชน · 8 จังหวัด" : "16 Communities · 8 Provinces"}
+            </h2>
+            <p className="text-sm text-brown/60 max-w-xl mx-auto leading-relaxed">
+              {lang === "th"
+                ? "เครือข่ายวิสาหกิจชุมชนเกษตรกรที่ร่วมเปลี่ยนเศษวัสดุการเกษตรให้เป็นไบโอชาร์ ครอบคลุมทั้งภาคเหนือและภาคกลาง"
+                : "A network of farming community enterprises turning crop residue into biochar, spanning Northern and Central Thailand."}
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { th: "พะเยา", en: "Phayao", items: ["บ้านป่าแขมเหนือ · อ.เชียงม่วน", "บ้านหล่ายทุ่ง · อ.เชียงม่วน"] },
+              { th: "น่าน", en: "Nan", items: ["แปลงใหญ่สมุนไพรบ่อสวก · อ.เมืองน่าน", "เกษตรม่วงใหม่ยั่งยืน · อ.ภูเพียง"] },
+              { th: "เชียงราย", en: "Chiang Rai", items: ["ศูนย์ข้าวชุมชนปลอดสารพิษ · อ.พาน", "ศูนย์เรียนรู้การผลิตเกษตร · อ.เทิง"] },
+              { th: "แพร่", en: "Phrae", items: ["บ้านปง · อ.ลอง", "บ้านห้วยขึม · อ.ร้องกวาง"] },
+              { th: "ลำปาง", en: "Lampang", items: ["ป่าชุมชนบ้านหัวฝาย · อ.แจ้ห่ม", "ชุมชนเจริญประเทศ · อ.เมืองลำปาง"] },
+              { th: "ลำพูน", en: "Lamphun", items: ["บ้านเชตะวัน · อ.เมืองลำพูน", "บ้านน้ำพุ · อ.เมืองลำพูน"] },
+              { th: "เชียงใหม่", en: "Chiang Mai", items: ["บ้านใหม่ · อ.แม่ออน", "อบต.แม่ทา · อ.แม่ออน"] },
+              { th: "พระนครศรีอยุธยา", en: "Ayutthaya", items: ["อบต.รางจรเข้ · อ.เสนา", "เทศบาลเมืองเจ้าเจ็ด · อ.เสนา"] },
+            ].map((p, i) => (
+              <div
+                key={p.en}
+                className="fade-in-up bg-cream-light border border-gold/20 p-5 hover:border-gold/50 transition-colors"
+                style={{ transitionDelay: `${i * 0.06}s` }}
+              >
+                <div className="flex items-baseline justify-between mb-4 pb-3 border-b border-gold/15">
+                  <h3 className="font-serif text-lg text-brown">{lang === "th" ? p.th : p.en}</h3>
+                  <span className="text-[10px] tracking-wider text-gold/70 uppercase">{lang === "th" ? p.en : p.th}</span>
+                </div>
+                <ul className="space-y-2">
+                  {p.items.map((c) => (
+                    <li key={c} className="flex gap-2 text-xs text-brown/65 leading-relaxed">
+                      <span className="text-gold mt-px">·</span>
+                      <span>{c}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
