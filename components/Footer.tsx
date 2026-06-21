@@ -67,17 +67,12 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-cream/50">
               <li>ธนพรกนก</li>
               <li>063-9977551</li>
-              <li>homthin@gmail.com</li>
-              <li>LINE: @homthin</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="border-t border-cream/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-cream/30">
-            © 2026 Hom Thin. All rights reserved.
-          </p>
           <p className="text-xs text-cream/20 italic">
             Made with purpose. Grown from the land.
           </p>
